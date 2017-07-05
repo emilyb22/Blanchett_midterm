@@ -37,7 +37,7 @@
                 <ul class="has-text-centered">
                     <li class="subtitle" ng-repeat="todo in todos | orderBy: 'done' track by $index">
                            <div>
-                            <form class="level container" name="formy2" ng-show="editing" ng-submit="editing = false" style="width:inherit; position: relative; ">
+                            <form class="level container" name="formy2" ng-show="editing" ng-submit="saveNew(); editing = false" style="width:inherit; position: relative; ">
                                <div class="level-left pddng-10">
                                 <label style="display:none;">Title</label>
                                 <input class="input is-small mrg-tb-5" type="text" ng-model="todo.title" placeholder="Name" ng-required />

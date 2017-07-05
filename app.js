@@ -20,4 +20,9 @@ controller('todoController',['$scope','myLocalStorage', function($scope, myLocal
             myLocalStorage.set('item', $scope.todos)
     }
     
+    $scope.saveNew = function(){
+        $scope.editing = false
+        myLocalStorage.set('item', $scope.todos)
+    }
+    
 }]) 
