@@ -1,4 +1,4 @@
-angular.module("ToDo").service('myLocalStorage', function () {
+angular.module("ToDoApp").service('apptodoLocalStorage', function () {
 
 function setAnItem(key, value) {
 localStorage.setItem(key, JSON.stringify(value));
@@ -11,8 +11,6 @@ return JSON.parse(localStorage.getItem(key));
 function deletAnItem(key) {
 localStorage.removeItem(key);
 }
-
-//INTERFACE
 
 return {
 set: setAnItem,
