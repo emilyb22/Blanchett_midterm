@@ -5,6 +5,7 @@ controller('toDoListCrtl',['$scope','apptodoLocalStorage', function($scope, appt
     $scope.addTodoItem = function(){ /*Adding items through the formy input*/
         $scope.todoitemsList.push({'title':$scope.newTask,'date':$scope.newDate, 'done':false}) //adding the date and the title
         apptodoLocalStorage.set("item", $scope.todoitemsList)
+        apptodoLocalStorage.set("done", $scope.todoitemsList)
         $scope.newTask = ''/*To empty the input*/
         $scope.newDate = ''
     }
